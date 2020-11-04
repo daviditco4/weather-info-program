@@ -1,15 +1,15 @@
-<ResultType>{
+<results>{
 for $a in distinct-values(doc("data.xml")//country/text())
 let $b := doc("countries.xml")//country[@alpha-2 = $a]
 order by $b/@name
 return
 	<country alpha-2="{$b/@alpha-2}">
-		<name>{$b/@name}</name>
+		<name>{string($b/@name)}</name>
 		<cities>{
 			for $item in doc("data.xml")//item[./city/country/text() = $b/@alpha-2]
 			return
 				<city>
-					<name>{$item/city/@name}</name>
+					<name>{string($item/city/@name)}</name>
 					<temperature unit="{$item/temperature/@unit}">{number($item/temperature/@value)}</temperature>
 					<feels_like unit="{$item/temperature/@unit}">{number($item/feels_like/@value)}</feels_like>
 					<humidity unit="{$item/humidity/@unit}">{round(number($item/humidity/@value))}</humidity>
@@ -19,4 +19,4 @@ return
 				</city>
 		}</cities>
 	</country>
-}</ResultType>
+}</results>
