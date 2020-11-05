@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!--
     This data is supposed to be obtained when using 
     - latitude=56.36​
@@ -6,7 +7,6 @@
     - ​appid en una variable Bash llamada "OPENWEATHER_API"
     as input values
 -->
-<?xml version="1.0" encoding="UTF-8"?>
 <cities>
     <calctime>0</calctime>  
     <count>2</count>  
