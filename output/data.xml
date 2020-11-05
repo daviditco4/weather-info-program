@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    This data is supposed to be obtained when using 
+    - latitude=56.36​
+    - ​longitude=28.16​,
+    - cnt=2​
+    - ​appid en una variable Bash llamada "OPENWEATHER_API"
+    as input values
+-->
+<cities>
+    <calctime>0</calctime>  
+    <count>2</count>  
+    <mode>center</mode>  
+    <list>    
+        <item>      
+            <city id="453850" name="Zilupe">        
+                <coord lon="28.12" lat="56.39"></coord>        
+                <country>LV</country>        
+                <sun rise="2020-10-19T04:48:14" set="2020-10-19T14:56:18"></sun>      
+            </city>      
+            <temperature value="275.21" min="275.21" max="275.21" unit="kelvin"></temperature>      
+            <feels_like value="270.53" unit="kelvin"></feels_like>      
+            <humidity value="91" unit="%"></humidity>      
+            <pressure value="1005" unit="hPa"></pressure>      
+            <wind>        
+                <speed value="4.01" unit="m/s" name="Gentle Breeze"></speed>        
+                <direction value="255" code="WSW" name="West-southwest"></direction>        
+                <gust value=""></gust>      
+            </wind>      
+            <clouds value="8" name="clear sky" low="0" middle="0" high="0"></clouds>      
+            <precipitation mode="no"></precipitation>      
+            <weather number="800" value="clear sky" icon="01n"></weather>      
+            <lastupdate value="2020-10-18T22:09:14" unix="1603058954"></lastupdate>    
+        </item>    
+        <item>      
+            <city id="498001" name="Sebezh">        
+                <coord lon="28.47" lat="56.3"></coord>        
+                <country>RU</country>        
+                <sun rise="2020-10-19T04:46:38" set="2020-10-19T14:55:07"></sun>      
+            </city>      
+            <temperature value="275.06" min="275.06" max="275.06" unit="kelvin"></temperature>      
+            <feels_like value="270.37" unit="kelvin"></feels_like>      
+            <humidity value="91" unit="%"></humidity>      
+            <pressure value="1005" unit="hPa"></pressure>      
+            <wind>        
+                <speed value="3.99" unit="m/s" name="Gentle Breeze"></speed>        
+                <direction value="247" code="WSW" name="West-southwest"></direction>        
+                <gust value=""></gust>      
+            </wind>      
+            <clouds value="3" name="clear sky" low="0" middle="0" high="0"></clouds>      
+            <precipitation mode="no"></precipitation>      
+            <weather number="800" value="clear sky" icon="01n"></weather>      
+            <lastupdate value="2020-10-18T22:09:20" unix="1603058960"></lastupdate>    
+        </item>  
+    </list>
+</cities>
