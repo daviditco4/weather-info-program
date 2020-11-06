@@ -1,12 +1,12 @@
 <results>{
-for $a in distinct-values(doc("data/data.xml")//country/text())
-let $b := doc("data/countries.xml")//country[@alpha-2 = $a]
+for $a in distinct-values(doc("../output/data.xml")//country/text())
+let $b := .//country[@alpha-2 = $a]
 order by $b/@name
 return
 	<country alpha-2="{$b/@alpha-2}">
 		<name>{string($b/@name)}</name>
 		<cities>{
-			for $item in doc("data/data.xml")//item[./city/country/text() = $b/@alpha-2]
+			for $item in doc("../output/data.xml")//item[./city/country/text() = $b/@alpha-2]
 			return
 				<city>
 					<name>{string($item/city/@name)}</name>
