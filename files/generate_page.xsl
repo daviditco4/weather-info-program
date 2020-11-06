@@ -3,7 +3,7 @@
         <html>
             <head>
                 <title>Weather on Citites</title>
-                <link rel="stylesheet" href="../style.css"/>    <!-- href takes into account the generated .html file will be located on the output_files folder -->
+                <link rel="stylesheet" href="../dummy/style.css"/>    <!-- href takes into account the generated .html file will be located on the output_files folder -->
             </head>
 
             <body>
