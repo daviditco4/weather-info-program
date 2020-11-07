@@ -13,7 +13,7 @@ return
 					<temperature unit="{$item/temperature/@unit}">{number($item/temperature/@value)}</temperature>
 					<feels_like unit="{$item/temperature/@unit}">{number($item/feels_like/@value)}</feels_like>
 					<humidity unit="{$item/humidity/@unit}">{round(number($item/humidity/@value))}</humidity>
-					<pressure unit="{$item/pressure/@unit}">{round(number($item/temperature/@value))}</pressure>
+					<pressure unit="{$item/pressure/@unit}">{round(number($item/pressure/@value))}</pressure>
 					<clouds>{string($item/clouds/@name)}</clouds>
 					<weather icon="{$item/weather/@icon}">{string($item/weather/@value)}</weather>
 				</city>
