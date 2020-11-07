@@ -50,7 +50,7 @@
                                             <xsl:value-of select="$feelsValue"/>
                                         </xsl:otherwise>      
                                     </xsl:choose>
-                                &#160;°C</td>
+                                °C</td>
                                 <td><xsl:value-of select="humidity"/><xsl:value-of select="humidity/@unit"/></td>
                                 <td><xsl:value-of select="pressure"/>&#160;<xsl:value-of select="pressure/@unit"/></td>
                                 <td><xsl:value-of select="clouds"/></td>
