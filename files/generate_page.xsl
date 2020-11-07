@@ -27,10 +27,10 @@
                                     <xsl:variable name="tempValue" select="temperature"/>
                                     <xsl:choose>
                                         <xsl:when test="temperature/@unit='kelvin'">
-                                            <xsl:value-of select="format-number(($tempValue)-273.15,'##.##')"/>
+                                            <xsl:value-of select="format-number(($tempValue)-273.15,'#0.##')"/>
                                         </xsl:when>
                                         <xsl:when test="temperature/@unit='fahrenheit'">
-                                            <xsl:value-of select="format-number((($tempValue)-32)*(5 div 9),'##.##')"/>
+                                            <xsl:value-of select="format-number((($tempValue)-32)*(5 div 9),'#0.##')"/>
                                         </xsl:when>
                                         <xsl:otherwise>
                                             <xsl:value-of select="$tempValue"/>
@@ -41,10 +41,10 @@
                                     <xsl:variable name="feelsValue" select="feels_like"/>
                                     <xsl:choose>
                                         <xsl:when test="feels_like/@unit='kelvin'">
-                                            <xsl:value-of select="format-number(($feelsValue)-273.15,'##.##')"/>
+                                            <xsl:value-of select="format-number(($feelsValue)-273.15,'#0.##')"/>
                                         </xsl:when>
                                         <xsl:when test="feels_like/@unit='fahrenheit'">
-                                            <xsl:value-of select="format-number((($feelsValue)-32)*(5 div 9),'##.##')"/>
+                                            <xsl:value-of select="format-number((($feelsValue)-32)*(5 div 9),'#0.##')"/>
                                         </xsl:when>
                                         <xsl:otherwise>
                                             <xsl:value-of select="$feelsValue"/>
