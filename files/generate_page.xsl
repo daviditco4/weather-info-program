@@ -23,8 +23,34 @@
                         <xsl:for-each select="./cities/city">
                             <tr>
                                 <td><xsl:value-of select="name"/></td>
-                                <td><xsl:value-of select="temperature"/>&#160;<xsl:value-of select="temperature/@unit"/></td> <!-- &#160; is the XML space (' ') character -->
-                                <td><xsl:value-of select="feels_like"/>&#160;<xsl:value-of select="feels_like/@unit"/></td>
+                                <td>
+                                    <xsl:variable name="tempValue" select="temperature"/>
+                                    <xsl:choose>
+                                        <xsl:when test="temperature/@unit='kelvin'">
+                                            <xsl:value-of select="format-number(($tempValue)-273.15,'##.##')"/>
+                                        </xsl:when>
+                                        <xsl:when test="temperature/@unit='fahrenheit'">
+                                            <xsl:value-of select="format-number((($tempValue)-32)*(5 div 9),'##.##')"/>
+                                        </xsl:when>
+                                        <xsl:otherwise>
+                                            <xsl:value-of select="$tempValue"/>
+                                        </xsl:otherwise>      
+                                    </xsl:choose>
+                                °C</td> <!-- &#160; is the XML space (' ') character -->
+                                <td>
+                                    <xsl:variable name="feelsValue" select="feels_like"/>
+                                    <xsl:choose>
+                                        <xsl:when test="feels_like/@unit='kelvin'">
+                                            <xsl:value-of select="format-number(($feelsValue)-273.15,'##.##')"/>
+                                        </xsl:when>
+                                        <xsl:when test="feels_like/@unit='fahrenheit'">
+                                            <xsl:value-of select="format-number((($feelsValue)-32)*(5 div 9),'##.##')"/>
+                                        </xsl:when>
+                                        <xsl:otherwise>
+                                            <xsl:value-of select="$feelsValue"/>
+                                        </xsl:otherwise>      
+                                    </xsl:choose>
+                                &#160;°C</td>
                                 <td><xsl:value-of select="humidity"/><xsl:value-of select="humidity/@unit"/></td>
                                 <td><xsl:value-of select="pressure"/>&#160;<xsl:value-of select="pressure/@unit"/></td>
                                 <td><xsl:value-of select="clouds"/></td>
