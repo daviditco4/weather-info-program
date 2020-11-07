@@ -43,6 +43,7 @@ th, td {
 }
 
 .weather_icon {
+    vertical-align: middle;
     width: 2em;
     height: 2em;
 }
