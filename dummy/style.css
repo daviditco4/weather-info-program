@@ -34,10 +34,6 @@ th, td {
     border-bottom: 1px solid #dddddd;
 }
 
-.city-table tr:hover {
-    background-color: #dddddd;
-}
-
 .city-table tr:nth-of-type(even){
     background-color: #f2f2f2;
 }
