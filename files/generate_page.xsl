@@ -28,7 +28,7 @@
                                 <td><xsl:value-of select="humidity"/><xsl:value-of select="humidity/@unit"/></td>
                                 <td><xsl:value-of select="pressure"/>&#160;<xsl:value-of select="pressure/@unit"/></td>
                                 <td><xsl:value-of select="clouds"/></td>
-                                <td><xsl:value-of select="weather"/></td>                            
+                                <td><xsl:value-of select="weather"/>&#160;<img class="weather_icon" alt="ERROR"><xsl:attribute name="src">../icons/<xsl:value-of select="./weather/@icon"/>.png</xsl:attribute></img></td>                            
                             </tr>
                         </xsl:for-each>
                     </table>
