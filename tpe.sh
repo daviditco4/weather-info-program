@@ -7,8 +7,7 @@ then
 fi
 
 echo "Calling OpenWeatherMap API..."
-appid="3dd5b30af1424f8d32277d2734d6af89"
-curl -# "https://api.openweathermap.org/data/2.5/find?lat=$1&lon=$2&cnt=$3&mode=xml&appid=$appid" |
+curl -# "https://api.openweathermap.org/data/2.5/find?lat=$1&lon=$2&cnt=$3&mode=xml&appid=$OPENWEATHER_API" |
     java net.sf.saxon.Query -s:- -qs:/ '!indent=yes' > output/data.xml
 
 echo "Extracting weather data..."
