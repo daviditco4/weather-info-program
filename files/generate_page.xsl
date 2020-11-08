@@ -3,7 +3,7 @@
         <html>
             <head>
                 <title>Weather on Citites</title>
-                <link rel="stylesheet" href="../dummy/style.css"/>    <!-- href takes into account the generated .html file will be located on the output_files folder -->
+                <link rel="stylesheet" href="../../dummy/style.css"/>    <!-- href takes into account the generated .html file will be located on the output_files folder -->
             </head>
 
             <body>
@@ -28,7 +28,7 @@
                                 <td><xsl:value-of select="humidity"/><xsl:value-of select="humidity/@unit"/></td>
                                 <td><xsl:value-of select="pressure"/>&#160;<xsl:value-of select="pressure/@unit"/></td>
                                 <td><xsl:value-of select="clouds"/></td>
-                                <td><img class="weather_icon" alt="weather_icon"><xsl:attribute name="src">../icons/<xsl:value-of select="./weather/@icon"/>.png</xsl:attribute></img>
+                                <td><img class="weather_icon" alt="weather_icon"><xsl:attribute name="src">../../icons/<xsl:value-of select="./weather/@icon"/>.png</xsl:attribute></img>
                                 <xsl:value-of select="weather"/>&#160;</td>                           
                             </tr>
                         </xsl:for-each>
