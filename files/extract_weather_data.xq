@@ -1,7 +1,7 @@
 <results>{
-if ( doc("data.xml")//ClientError )
+if ( doc("../output/data.xml")//ClientError )
 then
-	for $a in doc("data.xml")//message/text()
+	for $a in doc("../output/data.xml")//message/text()
 	return
 		<error>{
 			if( $a = "no results") then ("No results were found near those coordintates")
@@ -11,14 +11,14 @@ then
 			else $a
 		}</error>
 else
-	for $a in distinct-values(doc("data.xml")//country/text())
+	for $a in distinct-values(doc("../output/data.xml")//country/text())
 	let $b := doc("countries.xml")//country[@alpha-2 = $a]
 	order by $b/@name
 	return
 		<country alpha-2="{$b/@alpha-2}">
 			<name>{string($b/@name)}</name>
 			<cities>{
-				for $item in doc("data.xml")//item[./city/country/text() = $b/@alpha-2]
+				for $item in doc("../output/data.xml")//item[./city/country/text() = $b/@alpha-2]
 				return
 					<city>
 						<name>{string($item/city/@name)}</name>
