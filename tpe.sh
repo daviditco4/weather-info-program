@@ -2,7 +2,7 @@
 
 if [ $# -ne 3 ]
 then
-	echo "You must provide arguments: 'latitude' 'longitude' 'quantity'"
+	echo "You must provide 3 arguments: 'latitude' 'longitude' 'quantity'"
 	exit 1
 fi
 
