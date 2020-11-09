@@ -3,7 +3,13 @@ if ( doc("data.xml")//ClientError )
 then
 	for $a in doc("data.xml")//message/text()
 	return
-		<error>{$a}</error>
+		<error>{
+			if( $a = "no results") then ("No results were found near those coordintates")
+			else if($a="wrong longitude") then ("The longitude must be a number within -180 and 180")
+			else if($a="wrong latitude") then ("The latitude must be a number within -90 and 90")
+			else if($a="cnt from 1 to 50" or substring-after($a, ' ') = "is not a number") then ("The number of cities must be an integer between 1 and 50")
+			else $a
+		}</error>
 else
 	for $a in distinct-values(doc("data.xml")//country/text())
 	let $b := doc("countries.xml")//country[@alpha-2 = $a]
