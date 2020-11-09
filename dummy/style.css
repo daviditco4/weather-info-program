@@ -43,6 +43,8 @@ th, td {
 }
 
 .weather_icon {
+    border-radius: 0.85em;
+    background-color: #00B3FF;
     vertical-align: middle;
     width: 2em;
     height: 2em;

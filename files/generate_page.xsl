@@ -55,7 +55,7 @@
                                 <td><xsl:value-of select="pressure"/>&#160;<xsl:value-of select="pressure/@unit"/></td>
                                 <td><xsl:value-of select="clouds"/></td>
                                 <td><img class="weather_icon" alt="weather_icon"><xsl:attribute name="src">../icons/<xsl:value-of select="./weather/@icon"/>.png</xsl:attribute></img>
-                                <xsl:value-of select="weather"/>&#160;</td>                           
+                                &#160;<xsl:value-of select="weather"/></td>                           
                             </tr>
                         </xsl:for-each>
                     </table>
