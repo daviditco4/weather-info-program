@@ -14,7 +14,7 @@ curl -# "https://api.openweathermap.org/data/2.5/find?lat=$1&lon=$2&cnt=$3&mode=
     java net.sf.saxon.Query -s:- -qs:/ '!indent=yes' > output/data.xml
 
 echo "Extracting weather data..."
-java net.sf.saxon.Query -s:files/countries.xml -q:files/extract_weather_data.xq '!indent=yes' > output/weather_data.xml
+java net.sf.saxon.Query -s:output/data.xml -q:files/extract_weather_data.xq '!indent=yes' > output/weather_data.xml
 
 echo "Generating weather page..."
 java net.sf.saxon.Transform -s:output/weather_data.xml -xsl:files/generate_page.xsl -o:"$dir_out/weather_page.html"
