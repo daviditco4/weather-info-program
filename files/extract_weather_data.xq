@@ -4,7 +4,7 @@ then
 	for $msg in .//message/text()
 	return
 		<error>{
-			if ($msg = "no results") then "No results were found near those coordintates"
+			if ($msg = "no results") then "No results were found near those coordinates"
 			else if ($msg="wrong longitude") then "The longitude must be a number within -180 and 180"
 			else if ($msg="wrong latitude") then "The latitude must be a number within -90 and 90"
 			else if ($msg="cnt from 1 to 50" or substring-after($msg, ' ') = "is not a number") then "The number of cities must be an integer between 1 and 50"

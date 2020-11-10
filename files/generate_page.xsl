@@ -82,7 +82,11 @@
                     </xsl:when>
                     <xsl:otherwise>
                         <xsl:for-each select="//error">
-                            <xsl:value-of select="." />
+                            <div class="error_container">
+                                <img class="error_icon" src="../../icons/error.png" alt="error_icon"/>
+                                &#160;&#160; <!-- Double space between img and text-->
+                                ERROR: <xsl:value-of select="." />
+                            </div>
                         </xsl:for-each>
                     </xsl:otherwise>
                 </xsl:choose>
