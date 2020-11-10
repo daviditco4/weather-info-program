@@ -1,0 +1,51 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+th, td {
+    text-align: left;
+}
+
+.city-table {
+    width: 50%;
+    border-collapse: collapse;
+    margin: auto;
+    border-radius: 0.5em;
+    overflow: hidden;
+    white-space: nowrap;                            /* So that text appears on a single line */
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.15)
+}
+
+.city-table th {
+    padding: 0.35em 0.9em;                          /* top/bottom left/right */
+    font-size: 1.5em;
+    background-color: #4CAF50;
+    color: white;
+}
+
+.city-table td {
+    padding: 0.25em 0.9em;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-bottom: 1px solid #dddddd;
+}
+
+.city-table tr:nth-of-type(even){
+    background-color: #f2f2f2;
+}
+
+.city-table tr:last-of-type {
+    border-bottom: 2px solid #4CAF50;
+}
+
+.weather_icon {
+    border-radius: 0.85em;
+    background-color: #00B3FF;
+    vertical-align: middle;
+    width: 2em;
+    height: 2em;
+}
